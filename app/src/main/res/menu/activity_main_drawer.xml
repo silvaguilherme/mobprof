@@ -3,33 +3,39 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:title="Dashboard" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/nav_perfil"
+            android:icon="@drawable/ic_account_box_black_24dp"
+            android:title="Perfil" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/nav_criacao_prova"
+            android:icon="@drawable/ic_assignment_black_24dp"
+            android:title="Criação de Prova" />
+
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/nav_mensagem"
+            android:icon="@drawable/ic_chat_black_24dp"
+            android:title="Mensagem" />
+
+        <item
+            android:id="@+id/nav_calendario"
+            android:icon="@drawable/ic_event_note_black_24dp"
+            android:title="Calendario" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Desempenho">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:id="@+id/nav_des_aluno"
+                android:icon="@drawable/ic_trending_up_black_24dp"
+                android:title="Aluno" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:id="@+id/nav_des_turma"
+                android:icon="@drawable/ic_trending_up_black_24dp"
+                android:title="Turma" />
         </menu>
     </item>
 
