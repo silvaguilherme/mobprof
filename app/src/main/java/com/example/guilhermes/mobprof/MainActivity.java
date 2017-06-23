@@ -3,6 +3,8 @@ package com.example.guilhermes.mobprof;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -23,14 +25,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -40,6 +34,8 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        displaySelectedScreen(R.id.content_main);
     }
 
     @Override
@@ -73,31 +69,48 @@ public class MainActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
+    private  void displaySelectedScreen(int id){
+        Fragment fragment = null;
+
+        switch (id){
+            case R.id.nav_dashboard:
+                fragment = new dashboard();
+                break;
+            case R.id.nav_perfil:
+                fragment = new perfil();
+                break;
+            case R.id.nav_des_aluno:
+                fragment = new des_aluno();
+                break;
+            case R.id.nav_des_turma:
+                fragment = new des_turma();
+                break;
+            case R.id.nav_criacao_prova:
+                fragment = new criacao_prova();
+                break;
+            case R.id.nav_mensagem:
+                fragment = new mensagem();
+                break;
+            case R.id.nav_calendario:
+                fragment = new calendario();
+                break;
+        }
+        if(fragment !=null){
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_main, fragment);
+            ft.commit();
+        }
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
-        if (id == R.id.nav_dashboard) {
-            // Handle the camera action
-        } else if (id == R.id.nav_perfil) {
-
-        } else if (id == R.id.nav_criacao_prova) {
-
-        } else if (id == R.id.nav_mensagem) {
-
-        } else if (id == R.id.nav_calendario) {
-
-        } else if (id == R.id.nav_des_aluno) {
-
-        } else if (id == R.id.nav_des_turma) {
-
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+        displaySelectedScreen(id);
         return true;
     }
+
 }
