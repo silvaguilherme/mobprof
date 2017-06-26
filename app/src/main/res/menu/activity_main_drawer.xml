@@ -10,10 +10,6 @@
             android:id="@+id/nav_perfil"
             android:icon="@drawable/ic_account_box_black_24dp"
             android:title="Perfil" />
-        <item
-            android:id="@+id/nav_criacao_prova"
-            android:icon="@drawable/ic_assignment_black_24dp"
-            android:title="Criação de Prova" />
 
         <item
             android:id="@+id/nav_mensagem"
@@ -36,6 +32,20 @@
                 android:id="@+id/nav_des_turma"
                 android:icon="@drawable/ic_trending_up_black_24dp"
                 android:title="Turma" />
+        </menu>
+    </item>
+
+    <item android:title="Criação de prova">
+        <menu>
+            <item
+                android:id="@+id/nav_criacao_prova_aleatoria"
+                android:icon="@drawable/ic_assignment_black_24dp"
+                android:title="Aleatória" />
+
+            <item
+                android:id="@+id/nav_criacao_prova_manual"
+                android:icon="@drawable/ic_assignment_black_24dp"
+                android:title="Manual" />
         </menu>
     </item>
 

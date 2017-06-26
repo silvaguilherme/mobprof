@@ -1,11 +1,8 @@
 package com.example.guilhermes.mobprof;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -85,8 +82,11 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_des_turma:
                 fragment = new des_turma();
                 break;
-            case R.id.nav_criacao_prova:
-                fragment = new criacao_prova();
+            case R.id.nav_criacao_prova_aleatoria:
+                fragment = new criacaoProvaAleatoria();
+                break;
+            case R.id.nav_criacao_prova_manual:
+                fragment = new criacaoProvaManual();
                 break;
             case R.id.nav_mensagem:
                 fragment = new mensagem();
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity
                 fragment = new calendario();
                 break;
         }
-        if(fragment !=null){
+        if(fragment != null){
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_main, fragment);
             ft.commit();

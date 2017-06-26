@@ -8,20 +8,20 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by guilherme.s on 23/06/2017.
+ * Created by gusta on 25/06/2017.
  */
 
-public class criacao_prova extends Fragment{
+public class criacaoProvaManual extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        getActivity().setTitle("Criação Prova");
+        getActivity().setTitle("Criação de prova manual");
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.criacao_prova, container, false);
+        return inflater.inflate(R.layout.criacao_prova_manual, container, false);
     }
 }

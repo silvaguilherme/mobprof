@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+
+    <TextView
+        android:id="@+id/textViewAssunto"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assunto"
+        android:layout_marginTop="37dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:id="@+id/spinnerAssunto"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBottom="@+id/textViewAssunto"
+        android:layout_toRightOf="@+id/textViewAssunto"
+        android:layout_toEndOf="@+id/textViewAssunto"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp" />
+</RelativeLayout>
