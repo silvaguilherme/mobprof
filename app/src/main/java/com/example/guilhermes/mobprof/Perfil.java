@@ -11,17 +11,17 @@ import android.view.ViewGroup;
  * Created by guilherme.s on 23/06/2017.
  */
 
-public class mensagem extends Fragment{
+public class Perfil extends Fragment{
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        getActivity().setTitle("Mensagem");
+        getActivity().setTitle("Perfil");
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.mensagem, container, false);
+        return inflater.inflate(R.layout.perfil, container, false);
     }
 }

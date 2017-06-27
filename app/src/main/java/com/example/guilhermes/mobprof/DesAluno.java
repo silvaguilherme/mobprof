@@ -11,7 +11,7 @@ import android.view.ViewGroup;
  * Created by guilherme.s on 23/06/2017.
  */
 
-public class des_aluno extends Fragment{
+public class DesAluno extends Fragment{
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

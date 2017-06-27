@@ -71,28 +71,28 @@ public class MainActivity extends AppCompatActivity
 
         switch (id){
             case R.id.nav_dashboard:
-                fragment = new dashboard();
+                fragment = new Dashboard();
                 break;
             case R.id.nav_perfil:
-                fragment = new perfil();
+                fragment = new Perfil();
                 break;
             case R.id.nav_des_aluno:
-                fragment = new des_aluno();
+                fragment = new DesAluno();
                 break;
             case R.id.nav_des_turma:
-                fragment = new des_turma();
+                fragment = new DesTurma();
                 break;
             case R.id.nav_criacao_prova_aleatoria:
-                fragment = new criacaoProvaAleatoria();
+                fragment = new CriacaoProvaAleatoria();
                 break;
             case R.id.nav_criacao_prova_manual:
-                fragment = new criacaoProvaManual();
+                fragment = new CriacaoProvaManual();
                 break;
             case R.id.nav_mensagem:
-                fragment = new mensagem();
+                fragment = new Mensagem();
                 break;
             case R.id.nav_calendario:
-                fragment = new calendario();
+                fragment = new Calendario();
                 break;
         }
         if(fragment != null){

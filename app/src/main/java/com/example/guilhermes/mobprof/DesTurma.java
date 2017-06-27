@@ -11,17 +11,17 @@ import android.view.ViewGroup;
  * Created by guilherme.s on 23/06/2017.
  */
 
-public class calendario extends Fragment{
+public class DesTurma extends Fragment{
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        getActivity().setTitle("Calendario");
+        getActivity().setTitle("Desempenho Turma");
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.calendario, container, false);
+        return inflater.inflate(R.layout.des_turma, container, false);
     }
 }
