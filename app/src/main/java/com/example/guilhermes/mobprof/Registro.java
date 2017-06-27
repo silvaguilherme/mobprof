@@ -1,40 +1,30 @@
 package com.example.guilhermes.mobprof;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 
-
 public class Registro extends AppCompatActivity {
 
-    EditText ET_NAME, ET_USER_NAME, ET_USER_PASS;
-    String name, user_name, user_pass;
+    EditText ET_CDTIPO, ET_DSTIPO;
+    String dstipo, cdtipo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
-        ET_NAME = (EditText)findViewById(R.id.name);
-        ET_USER_NAME = (EditText)findViewById(R.id.new_user_name);
-        ET_USER_PASS = (EditText)findViewById(R.id.new_user_pass);
+        ET_CDTIPO = (EditText)findViewById(R.id.new_CDTIPO);
+        ET_DSTIPO = (EditText)findViewById(R.id.new_DSTIPO);
 
     }
-
     public void userReg(View view){
-        name = ET_NAME.getText().toString();
-        user_name = ET_USER_NAME.getText().toString();
-        user_pass = ET_USER_PASS.getText().toString();
-
+        cdtipo = ET_CDTIPO.getText().toString();
+        dstipo = ET_DSTIPO.getText().toString();
         String method = "Registro";
 
-
         BackgroundTask backgroundTask = new BackgroundTask(this);
-        backgroundTask.execute(method, name, user_name, user_pass);
-
+        backgroundTask.execute(method, cdtipo, dstipo);
         finish();
 
     }

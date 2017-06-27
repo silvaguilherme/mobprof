@@ -27,39 +27,41 @@ public class BackgroundTask extends AsyncTask<String, Void, String>{
 
     AlertDialog alertDialog;
     Context ctx;
-    BackgroundTask(Context ctx){
+
+    BackgroundTask(Context ctx)
+    {
+
         this.ctx = ctx;
     }
 
 
     @Override
+    protected void onPreExecute(){
+        alertDialog = new AlertDialog.Builder(ctx).create();
+        alertDialog.setTitle("Informações do Login....");
+    }
+
+    @Override
     protected String doInBackground(String... params) {
-        String reg_url = "http://10.8.77.47:8080/phpMyAdmin/registro.php";
-        String login_url = "http://10.8.77.47/phpMyAdmin/login.php";
+        String reg_url = "http://10.8.77.47/phpmyadmin/registro-tipo.php";
+        String login_url = "http://10.8.77.47/phpmymdmin/login.php";
         String method = params[0];
 
-        if(method.equals("registrar")){
-            String MATRICULA  = params[1];
-            String DSUSUARIO  = params[2];
-            String NUMCPF  = params[3];
-            String NUMFONE  = params[4];
-            String CDTIPO  = params[5];
-            String SENHA  = params[6];
+        if(method.equals("Registro")){
+            String CDTIPO  = params[1];
+            String DSTIPO  = params[2];
 
             try{
                 URL url = new URL(reg_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
+
                 //httpURLConnection.setDoInput(true);
                 OutputStream OS = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(OS, "UTF-8"));
-                String data = URLEncoder.encode("MATRICULA", "UTF-8") + "=" + URLEncoder.encode(MATRICULA, "UTF-8") + "&" +
-                        URLEncoder.encode("DSUSUARIO", "UTF-8") + "=" + URLEncoder.encode(DSUSUARIO, "UTF-8") + "&" +
-                        URLEncoder.encode("NUMCPF", "UTF-8") + "=" + URLEncoder.encode(NUMCPF, "UTF-8") + "&" +
-                        URLEncoder.encode("NUMFONE", "UTF-8") + "=" + URLEncoder.encode(NUMFONE, "UTF-8") + "&" +
-                        URLEncoder.encode("CDTIPO", "UTF-8") + "=" + URLEncoder.encode(CDTIPO, "UTF-8") + "&" +
-                        URLEncoder.encode("SENHA", "UTF-8") + "=" + URLEncoder.encode(SENHA, "UTF-8");
+                String data = URLEncoder.encode("CDTIPO", "UTF-8") + "=" + URLEncoder.encode(CDTIPO, "UTF-8") + "&" +
+                              URLEncoder.encode("DSTIPO", "UTF-8") + "=" + URLEncoder.encode(DSTIPO, "UTF-8");
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -77,7 +79,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String>{
             }
         }
 
-        else if(method.equals("login"))
+        else if(method.equals("Login"))
         {
             String MATRICULA = params[1];
             String SENHA = params[2];
@@ -89,8 +91,8 @@ public class BackgroundTask extends AsyncTask<String, Void, String>{
                 httpURLConnection.setDoInput(true);
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream,"UTF-8"));
-                String data = URLEncoder.encode("MATRICULA","UTF-8")+"="+URLEncoder.encode(MATRICULA,"UTF-8")+"&"+
-                        URLEncoder.encode("SENHA","UTF-8")+"="+URLEncoder.encode(SENHA,"UTF-8");
+                String data = URLEncoder.encode("MATRICULA", "UTF-8") + "=" + URLEncoder.encode(MATRICULA, "UTF-8") + "&" +
+                              URLEncoder.encode("SENHA","UTF-8")+"="+URLEncoder.encode(SENHA,"UTF-8");
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -99,7 +101,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String>{
                 InputStream inputStream = httpURLConnection.getInputStream();
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream,"iso-8859-1"));
                 String response = "";
-                String line  = "";
+                String line = "";
                 while ((line = bufferedReader.readLine())!=null)
                 {
                     response+= line;
@@ -118,23 +120,17 @@ public class BackgroundTask extends AsyncTask<String, Void, String>{
         return null;
     }
 
-    @Override
-    protected void onPreExecute(){
-        alertDialog = new AlertDialog.Builder(ctx).create();
-        alertDialog.setTitle("Informações do Login....");
-    }
-
-    @Override
-    protected void onProgressUpdate(Void... values) {
-        super.onProgressUpdate(values);
-    }
 
     @Override
     protected void onPostExecute(String result) {
+        if (result == null) {
+            Toast.makeText(ctx,"result was null", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         if(result.equals("Registrado com Sucesso..."))
         {
             Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
-
         }
         else
         {
@@ -143,6 +139,10 @@ public class BackgroundTask extends AsyncTask<String, Void, String>{
         }
     }
 
+    @Override
+    protected void onProgressUpdate(Void... values) {
+        super.onProgressUpdate(values);
+    }
 
 }
 

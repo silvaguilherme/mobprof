@@ -26,39 +26,6 @@
     <EditText
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:hint="Matricula"
-        android:id="@+id/new_MATRICULA"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="5dp"
-        />
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:hint="Nome"
-        android:id="@+id/new_DSUSUARIO"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="5dp"
-        />
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:hint="CPF"
-        android:id="@+id/new_NUMCPF"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="5dp"
-        />
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:hint="Telefone"
-        android:id="@+id/new_NUMFONE"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="5dp"
-        />
-
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="40dp"
         android:hint="Tipo de Usuario"
         android:id="@+id/new_CDTIPO"
         android:layout_gravity="center_horizontal"
@@ -68,12 +35,12 @@
     <EditText
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:hint="Senha"
-        android:id="@+id/new_SENHA"
+        android:hint="Tipo de Usuario"
+        android:id="@+id/new_DSTIPO"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:inputType="textPassword"
+        android:layout_marginTop="5dp"
         />
+
     <Button
         android:layout_width="130dp"
         android:layout_height="40dp"

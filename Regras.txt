@@ -1,0 +1,10 @@
+1)Para conectar no banco de dados é preciso liberar o acesso por IP nas configurações do PHPMyadmin(Usamos o Wamp).
+No arquivo "phpmyadmin.conf" que esta na pasta \wamp64\alias, deve-se inserir essas linhas:
+Order Allow,Deny
+Allow from all
+Allow from localhost ::1 127.0.0.1
+Allow from 127.0.0.1
+Allow from SEU IP LOCAL
+
+Após feito isso, alterar o IP novamente, mas agora no arquivo "BackgroundTask" que esta na pasta mobprof\app\src\main\java\.
+A linhas 37 e 38 devem ser alteradas confome seu IP

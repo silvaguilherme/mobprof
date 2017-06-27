@@ -17,7 +17,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:hint="Usuário"
-        android:id="@+id/user_name"
+        android:id="@+id/matricula"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="70dp"
         />
@@ -26,7 +26,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:hint="Senha"
-        android:id="@+id/user_pass"
+        android:id="@+id/senha"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:inputType="textPassword"
@@ -46,8 +46,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:onClick="recupersenha"
         android:text="Esqueci minha Senha" />
+
+    <Button
+        android:id="@+id/registrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:onClick="userReg"
+        android:text="Registro" />
 
 </LinearLayout>

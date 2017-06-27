@@ -10,4 +10,12 @@
     tools:showIn="@layout/app_bar_main">
 
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="182dp"
+        tools:layout_editor_absoluteY="218dp" />
+
 </android.support.constraint.ConstraintLayout>

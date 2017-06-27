@@ -1,5 +1,6 @@
 package com.example.guilhermes.mobprof;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -11,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -21,8 +24,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
+
     private  void displaySelectedScreen(int id){
         Fragment fragment = null;
 
@@ -83,7 +85,7 @@ public class MainActivity extends AppCompatActivity
                 fragment = new DesTurma();
                 break;
             case R.id.nav_criacao_prova_aleatoria:
-                fragment = new CriacaoProvaAleatoria();
+                fragment = new CriacaoProvaManual();
                 break;
             case R.id.nav_criacao_prova_manual:
                 fragment = new CriacaoProvaManual();
@@ -106,11 +108,13 @@ public class MainActivity extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
+
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         displaySelectedScreen(id);
         return true;
     }
+
 
 }
