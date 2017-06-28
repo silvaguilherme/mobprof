@@ -1,5 +1,6 @@
 package com.example.guilhermes.mobprof;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -27,24 +28,28 @@ public class BackgroundTask extends AsyncTask<String, Void, String>{
 
     AlertDialog alertDialog;
     Context ctx;
+    Activity activity;
+    AlertDialog.Builder builder;
 
     BackgroundTask(Context ctx)
     {
 
         this.ctx = ctx;
+        activity = (Activity) ctx;
     }
 
 
     @Override
     protected void onPreExecute(){
+        builder = new AlertDialog.Builder(activity);
         alertDialog = new AlertDialog.Builder(ctx).create();
         alertDialog.setTitle("Informações do Login....");
     }
 
     @Override
     protected String doInBackground(String... params) {
-        String reg_url = "http://10.8.77.47/phpmyadmin/registro-tipo.php";
-        String login_url = "http://10.8.77.47/phpmymdmin/login.php";
+        String reg_url = "http://10.8.77.47:8080/phpmyadmin/registro-tipo.php";
+        String login_url = "http://10.8.77.47:8080/phpmyadmin/login.php";
         String method = params[0];
 
         if(method.equals("Registro")){
@@ -123,9 +128,9 @@ public class BackgroundTask extends AsyncTask<String, Void, String>{
 
     @Override
     protected void onPostExecute(String result) {
-        if (result == null) {
-            Toast.makeText(ctx,"result was null", Toast.LENGTH_SHORT).show();
-            return;
+
+        if(result.equals(null)){
+
         }
 
         if(result.equals("Registrado com Sucesso..."))
@@ -136,6 +141,10 @@ public class BackgroundTask extends AsyncTask<String, Void, String>{
         {
             alertDialog.setMessage(result);
             alertDialog.show();
+            //Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
+            //Intent intent = new Intent(activity,MainActivity.class);
+            //activity.startActivity(intent);
+
         }
     }
 

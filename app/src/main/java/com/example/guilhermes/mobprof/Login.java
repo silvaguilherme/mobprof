@@ -11,8 +11,7 @@ import android.widget.EditText;
 public class Login extends AppCompatActivity{
 
     EditText ET_NAME, ET_PASS;
-    Integer matriculaint;
-    String MATRICULA, SENHA;
+    String matricula, senha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,17 +22,16 @@ public class Login extends AppCompatActivity{
     }
 
     public void userReg(View view) {
-
         startActivity(new Intent(this, Registro.class));
     }
 
     public void userLogin(View view){
-        matriculaint = Integer.parseInt(ET_NAME.getText().toString());
-        MATRICULA = matriculaint.toString();
-        SENHA = ET_PASS.getText().toString();
+        matricula = ET_NAME.getText().toString();
+        senha = ET_PASS.getText().toString();
         String method = "Login";
         BackgroundTask backgroundtask = new BackgroundTask(this);
-        backgroundtask.execute(method, MATRICULA, SENHA);
+        backgroundtask.execute(method, matricula, senha);
+
 
     }
 
