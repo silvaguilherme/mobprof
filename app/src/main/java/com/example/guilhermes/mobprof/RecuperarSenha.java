@@ -15,4 +15,8 @@ public class RecuperarSenha extends AppCompatActivity {
         setContentView(R.layout.activity_recuperar_senha);
     }
 
+    public void userRescue(View view) {
+
+    }
+
 }

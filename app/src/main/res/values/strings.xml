@@ -6,4 +6,35 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_registro">Registro</string>
+    <string name="title_activity_des_aluno">DesAluno</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="hello">Hello!</string>
+
+    <string-array name="curso">
+        <item>Selecione o Curso</item>
+        <item>Administração</item>
+        <item>Bacharelado em Sistemas da Informação</item>
+        <item>Direito</item>
+        <item>Engenharia da Computação</item>
+    </string-array>
+
+    <string-array name="turma">
+        <item>Selecione a Turma</item>
+        <item>BSI-311</item>
+        <item>BSI-321o</item>
+        <item>BSI-331</item>
+    </string-array>
+
+    <string-array name="aluno">
+        <item>Selecione o Aluno</item>
+        <item>Gabriel</item>
+        <item>Guilherme</item>
+        <item>Gustavo</item>
+        <item>Leonardo</item>
+        <item>Sarah</item>
+    </string-array>
+
 </resources>

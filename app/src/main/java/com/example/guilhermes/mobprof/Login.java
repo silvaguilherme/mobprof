@@ -6,7 +6,9 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 public class Login extends AppCompatActivity{
 
@@ -32,7 +34,10 @@ public class Login extends AppCompatActivity{
         BackgroundTask backgroundtask = new BackgroundTask(this);
         backgroundtask.execute(method, matricula, senha);
 
+    }
 
+    public void userRescue(View view) {
+        startActivity(new Intent(this, RecuperarSenha.class));
     }
 
     }
