@@ -7,16 +7,19 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
 public class Login extends AppCompatActivity{
+
 
     EditText ET_NAME, ET_PASS;
     String matricula, senha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ET_NAME = (EditText)findViewById(R.id.matricula);
@@ -24,20 +27,20 @@ public class Login extends AppCompatActivity{
     }
 
     public void userReg(View view) {
-        startActivity(new Intent(this, Registro.class));
+
+        startActivity(new Intent(this, RecuperarSenha.class));
     }
 
     public void userLogin(View view){
-        matricula = ET_NAME.getText().toString();
-        senha = ET_PASS.getText().toString();
-        String method = "Login";
-        BackgroundTask backgroundtask = new BackgroundTask(this);
-        backgroundtask.execute(method, matricula, senha);
+        //matricula = ET_NAME.getText().toString();
+        //senha = ET_PASS.getText().toString();
+        //String method = "Login";
+        //BackgroundTask backgroundtask = new BackgroundTask(this);
+        //backgroundtask.execute(method, matricula, senha);
+        startActivity(new Intent(this, MainActivity.class));
 
     }
 
-    public void userRescue(View view) {
-        startActivity(new Intent(this, RecuperarSenha.class));
-    }
+
 
     }

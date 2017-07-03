@@ -6,24 +6,21 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Spinner;
 
 /**
  * Created by guilherme.s on 23/06/2017.
  */
 
-public class Dashboard extends Fragment{
+public class Pendencias extends Fragment{
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("Dashboard");
+        getActivity().setTitle("Avaliar Provas");
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.dashboard, container, false);
+        return inflater.inflate(R.layout.pendencias, container, false);
     }
 }

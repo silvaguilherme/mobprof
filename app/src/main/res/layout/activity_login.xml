@@ -34,7 +34,7 @@
         />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/nomeDoBotao"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -43,22 +43,12 @@
         android:text="Login" />
 
     <Button
-        android:id="@+id/recuperar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
-        android:onClick="userRescue"
-        android:text="Esqueci minha Senha" />
-
-
-    <Button
         android:id="@+id/registrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:onClick="userReg"
-        android:text="Registro" />
+        android:text="Esqueci minha Senha" />
 
 </LinearLayout>

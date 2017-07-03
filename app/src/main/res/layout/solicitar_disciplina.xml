@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="11dp"
+        android:text="Solicitar Disciplina"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textStyle="bold" />
+
+
+    <Spinner
+        android:id="@+id/disciplina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        android:visibility="visible"></Spinner>
+
+    <RadioButton
+        android:id="@+id/radioButton9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Disciplina 1" />
+
+    <RadioButton
+        android:id="@+id/radioButton10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Disciplina 2" />
+
+    <RadioButton
+        android:id="@+id/radioButton11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Disciplina 3" />
+
+    <RadioButton
+        android:id="@+id/radioButton12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Disciplina 4" />
+
+    <RadioButton
+        android:id="@+id/radioButton13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Disciplina 5" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Solicitar" />
+
+</LinearLayout>

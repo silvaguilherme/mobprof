@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Registro extends AppCompatActivity {
 
@@ -13,18 +14,20 @@ public class Registro extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_registro);
-        ET_CDTIPO = (EditText)findViewById(R.id.new_CDTIPO);
-        ET_DSTIPO = (EditText)findViewById(R.id.new_DSTIPO);
+        //ET_CDTIPO = (EditText)findViewById(R.id.new_CDTIPO);
+        //ET_DSTIPO = (EditText)findViewById(R.id.new_DSTIPO);
 
     }
     public void userReg(View view){
-        cdtipo = ET_CDTIPO.getText().toString();
-        dstipo = ET_DSTIPO.getText().toString();
-        String method = "Registro";
+        //cdtipo = ET_CDTIPO.getText().toString();
+        //dstipo = ET_DSTIPO.getText().toString();
+        //String method = "Registro";
 
-        BackgroundTask backgroundTask = new BackgroundTask(this);
-        backgroundTask.execute(method, cdtipo, dstipo);
+        //BackgroundTask backgroundTask = new BackgroundTask(this);
+        //backgroundTask.execute(method, cdtipo, dstipo);
+        Toast.makeText(getApplicationContext(), "Informações Enviadas Por E-Mail", Toast.LENGTH_SHORT).show();
         finish();
 
     }

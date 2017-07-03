@@ -6,7 +6,9 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_registro">Registro</string>
+    <string name="title_activity_recuperar">Recuperar Senha</string>
     <string name="title_activity_des_aluno">DesAluno</string>
+    <string name="title_activity_main">Home</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -35,6 +37,14 @@
         <item>Gustavo</item>
         <item>Leonardo</item>
         <item>Sarah</item>
+    </string-array>
+
+    <string-array name="disciplina">
+        <item>Selecione a Disciplina</item>
+        <item>Pendências</item>
+        <item>Solicitar Disciplina</item>
+        <item>Criar Avaliações</item>
+        <item>Avaliar Desempenho</item>
     </string-array>
 
 </resources>
