@@ -14,27 +14,34 @@
         android:layout_marginTop="10dp"/>
 
 
-    <TextView
-        android:id="@+id/textViewAssunto"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/assunto"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Assunto"
-        android:layout_marginTop="37dp"
-        android:layout_marginLeft="31dp"
-        android:layout_marginStart="31dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_gravity="left"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:visibility="visible"></Spinner>
 
     <Spinner
-        android:id="@+id/spinnerAssunto"
-        android:layout_width="200dp"
+        android:id="@+id/nivel"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="80dp"
+        android:textAlignment="center"
+        android:visibility="visible"></Spinner>
 
-        android:layout_alignBottom="@+id/textViewAssunto"
-        android:layout_toRightOf="@+id/textViewAssunto"
-        android:layout_toEndOf="@+id/textViewAssunto"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/buttonCriar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="300dp"
+        android:onClick="onButtonClick"
+        android:text="Criar prova" />
+
+
+
 </LinearLayout>

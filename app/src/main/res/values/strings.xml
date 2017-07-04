@@ -46,5 +46,19 @@
         <item>Criar Avaliações</item>
         <item>Avaliar Desempenho</item>
     </string-array>
-
+    <string-array name="assunto">
+        <item>Selecione o assunto</item>
+        <item>Administração</item>
+        <item>Sistemas da Informação</item>
+        <item>Banco de dados</item>
+        <item>Programação I</item>
+    </string-array>
+    <string-array name="nivel_prova">
+        <item>Selecione o nível da prova</item>
+        <item>Muito fácil</item>
+        <item>Fácil</item>
+        <item>Médio</item>
+        <item>Difícil</item>
+        <item>Muito difícil</item>
+    </string-array>
 </resources>

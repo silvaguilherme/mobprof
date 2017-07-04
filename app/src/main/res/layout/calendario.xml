@@ -5,12 +5,10 @@
     android:weightSum="1">
 
 
-    <TextView
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:id="@+id/textView3"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+    <DatePicker
+        android:id="@+id/datePicker2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dashboard" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

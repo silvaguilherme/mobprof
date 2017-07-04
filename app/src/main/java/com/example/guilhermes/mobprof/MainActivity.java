@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity
         Fragment fragment = null;
         switch (id){
             case R.id.nav_dashboard:
-                fragment = new SolicitarDisciplina();
+                fragment = new Dashboard();
                 break;
             case R.id.nav_perfil:
                 fragment = new Perfil();
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity
                 fragment = new DesTurma();
                 break;
             case R.id.nav_criacao_prova_aleatoria:
-                fragment = new CriacaoProvaManual();
+                fragment = new CriacaoProvaAleatoriaConfirmacao();
                 break;
             case R.id.nav_criacao_prova_manual:
                 fragment = new CriacaoProvaManual();
